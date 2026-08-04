@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box;}
+  body{margin:0;background:#f5f5f5;color:#292524;font-family:Inter,system-ui,sans-serif;-webkit-font-smoothing:antialiased;}
+  a{color:#292524;}
+  input,textarea,select{font-family:inherit;}
+  input:focus,textarea:focus,select:focus{outline:none;border-color:#292524;}
+  input::placeholder,textarea::placeholder{color:#a8a29e;}
+  @keyframes fp-driftC{0%,100%{transform:translate(0,0) scale(1);}50%{transform:translate(30px,-24px) scale(1.08);}}
+</style>
+</helmet>
+<div>
+<dc-import name="site-nav" active="contact" hint-size="100%,64px"></dc-import>
+
+<section style="position:relative;overflow:hidden;">
+  <div style="position:absolute;inset:0;pointer-events:none;">
+    <div style="position:absolute;top:-120px;right:-40px;width:480px;height:440px;border-radius:50%;background:radial-gradient(circle at 50% 50%, #a7e5d3, transparent 70%);filter:blur(66px);opacity:0.45;animation:fp-driftC 22s ease-in-out infinite;"></div>
+  </div>
+  <div style="position:relative;max-width:1120px;margin:0 auto;padding:clamp(56px,8vw,96px) 24px clamp(40px,6vw,56px);">
+    <div style="max-width:640px;margin:0 auto;text-align:center;">
+      <div style="font-size:12px;letter-spacing:0.1em;text-transform:uppercase;color:#777169;margin-bottom:24px;">도입 문의 · Contact</div>
+      <h1 style="font-size:clamp(34px,5.6vw,56px);font-weight:300;line-height:1.06;letter-spacing:-0.03em;margin:0 0 20px;color:#292524;text-wrap:pretty;">회사의 하루를<br>FLOWPORT로 열어보세요.</h1>
+      <p style="font-size:clamp(16px,2vw,19px);line-height:1.6;color:#4e4e4e;margin:0;">인원과 필요한 기능을 남겨 주시면 영업일 기준 1일 이내에 맞춤 견적과 도입 일정을 안내해 드립니다.</p>
+    </div>
+  </div>
+</section>
+
+<section style="max-width:1120px;margin:0 auto;padding:0 24px clamp(64px,9vw,96px);">
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:32px;align-items:start;">
+
+    <div style="background:#fff;border:1px solid #e7e5e4;border-radius:20px;padding:clamp(24px,4vw,40px);">
+      <sc-if value="{{ submitted }}" hint-placeholder-val="{{ false }}">
+        <div style="text-align:center;padding:32px 8px;">
+          <div style="width:64px;height:64px;border-radius:50%;background:radial-gradient(circle at 32% 28%, #a7e5d3, #a8c8e8);display:flex;align-items:center;justify-content:center;margin:0 auto 24px;"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#0c0a09" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5 5 11-11"/></svg></div>
+          <h2 style="font-size:26px;font-weight:400;letter-spacing:-0.02em;color:#292524;margin:0 0 12px;">문의가 접수되었습니다</h2>
+          <p style="font-size:16px;line-height:1.6;color:#777169;margin:0 0 28px;">담당자가 확인 후 영업일 기준 1일 이내에 연락드리겠습니다. 감사합니다.</p>
+          <button onClick="{{ reset }}" style="font-size:15px;color:#292524;background:transparent;border:1px solid #d6d3d1;padding:11px 22px;border-radius:9999px;cursor:pointer;">새 문의 작성</button>
+        </div>
+      </sc-if>
+      <sc-if value="{{ editing }}" hint-placeholder-val="{{ true }}">
+        <form onSubmit="{{ submit }}">
+          <div style="display:flex;flex-direction:column;gap:6px;margin-bottom:18px;">
+            <label style="font-size:13px;color:#777169;">문의 유형</label>
+            <div style="display:flex;flex-wrap:wrap;gap:8px;">
+              <button type="button" onClick="{{ pickInquiry }}" data-v="도입 문의" style="{{ chipDemo }}">도입 · 상담 신청</button>
+              <button type="button" onClick="{{ pickInquiry }}" data-v="무료 체험" style="{{ chipTrial }}">무료 체험 시작</button>
+              <button type="button" onClick="{{ pickInquiry }}" data-v="앱 다운로드" style="{{ chipApp }}">앱 다운로드 안내</button>
+            </div>
+          </div>
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:14px;margin-bottom:16px;">
+            <div style="display:flex;flex-direction:column;gap:6px;">
+              <label style="font-size:13px;color:#777169;">이름 *</label>
+              <input required type="text" placeholder="홍길동" style="height:44px;padding:0 14px;border:1px solid #e7e5e4;border-radius:8px;font-size:15px;background:#fafafa;color:#292524;">
+            </div>
+            <div style="display:flex;flex-direction:column;gap:6px;">
+              <label style="font-size:13px;color:#777169;">회사명 *</label>
+              <input required type="text" placeholder="플로우포트" style="height:44px;padding:0 14px;border:1px solid #e7e5e4;border-radius:8px;font-size:15px;background:#fafafa;color:#292524;">
+            </div>
+          </div>
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:14px;margin-bottom:16px;">
+            <div style="display:flex;flex-direction:column;gap:6px;">
+              <label style="font-size:13px;color:#777169;">이메일 *</label>
+              <input required type="email" placeholder="name@company.com" style="height:44px;padding:0 14px;border:1px solid #e7e5e4;border-radius:8px;font-size:15px;background:#fafafa;color:#292524;">
+            </div>
+            <div style="display:flex;flex-direction:column;gap:6px;">
+              <label style="font-size:13px;color:#777169;">연락처</label>
+              <input type="tel" placeholder="010-0000-0000" style="height:44px;padding:0 14px;border:1px solid #e7e5e4;border-radius:8px;font-size:15px;background:#fafafa;color:#292524;">
+            </div>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:6px;margin-bottom:16px;">
+            <label style="font-size:13px;color:#777169;">임직원 규모</label>
+            <select style="height:44px;padding:0 14px;border:1px solid #e7e5e4;border-radius:8px;font-size:15px;background:#fafafa;color:#292524;">
+              <option>1–30명</option>
+              <option>31–100명</option>
+              <option>101–300명</option>
+              <option>301명 이상</option>
+            </select>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:6px;margin-bottom:24px;">
+            <label style="font-size:13px;color:#777169;">문의 내용</label>
+            <textarea rows="4" placeholder="관심 있는 기능(출퇴근·연차·급여·연동 등)과 도입 시점을 알려주세요." style="padding:12px 14px;border:1px solid #e7e5e4;border-radius:8px;font-size:15px;background:#fafafa;color:#292524;resize:vertical;line-height:1.5;"></textarea>
+          </div>
+          <button type="submit" style="width:100%;font-size:15px;color:#fff;background:#292524;border:none;padding:14px;border-radius:9999px;cursor:pointer;" style-hover="background:#0c0a09;">문의 보내기</button>
+          <p style="font-size:12px;color:#a8a29e;text-align:center;margin:14px 0 0;line-height:1.5;">문의 시 개인정보처리방침에 동의한 것으로 간주됩니다.</p>
+        </form>
+      </sc-if>
+    </div>
+
+    <div style="display:flex;flex-direction:column;gap:20px;">
+      <div style="background:#fff;border:1px solid #e7e5e4;border-radius:20px;padding:28px;">
+        <div style="font-size:12px;letter-spacing:0.08em;text-transform:uppercase;color:#a8a29e;margin-bottom:18px;">직접 연락하기</div>
+        <div style="display:flex;flex-direction:column;gap:16px;">
+          <div><div style="font-size:13px;color:#a8a29e;">이메일</div><div style="font-size:16px;color:#292524;margin-top:2px;">sales@flowport.io</div></div>
+          <div><div style="font-size:13px;color:#a8a29e;">전화</div><div style="font-size:16px;color:#292524;margin-top:2px;">02-1234-5678</div></div>
+          <div><div style="font-size:13px;color:#a8a29e;">운영 시간</div><div style="font-size:16px;color:#292524;margin-top:2px;">평일 10:00 – 18:00</div></div>
+        </div>
+      </div>
+      <div style="background:#0c0a09;color:#fff;border-radius:20px;padding:28px;">
+        <div style="font-size:12px;letter-spacing:0.08em;text-transform:uppercase;color:#777169;margin-bottom:8px;">앱 다운로드</div>
+        <div style="font-size:18px;font-weight:400;letter-spacing:-0.01em;margin-bottom:20px;">iOS · Android에서 만나요</div>
+        <div style="display:flex;flex-direction:column;gap:10px;">
+          <a href="contact.dc.html" style="text-decoration:none;display:flex;align-items:center;gap:12px;background:#1c1917;border:1px solid #292524;border-radius:12px;padding:12px 16px;" style-hover="background:#292524;">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="#fff"><path d="M16.4 12.9c0-2.3 1.9-3.4 2-3.5-1.1-1.6-2.8-1.8-3.4-1.8-1.4-.1-2.8.9-3.5.9s-1.8-.9-3-.8c-1.5 0-2.9.9-3.7 2.3-1.6 2.7-.4 6.8 1.1 9 .7 1.1 1.6 2.3 2.7 2.2 1.1 0 1.5-.7 2.8-.7s1.7.7 2.8.7 1.9-1.1 2.6-2.1c.8-1.2 1.2-2.4 1.2-2.5-.1 0-2.3-.9-2.3-3.4M14.2 5.6c.6-.7 1-1.7.9-2.7-.9 0-1.9.6-2.5 1.3-.5.6-1 1.6-.9 2.6 1 .1 1.9-.5 2.5-1.2"/></svg>
+            <span style="font-size:15px;color:#fff;">App Store</span>
+          </a>
+          <a href="contact.dc.html" style="text-decoration:none;display:flex;align-items:center;gap:12px;background:#1c1917;border:1px solid #292524;border-radius:12px;padding:12px 16px;" style-hover="background:#292524;">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M4 3.5v17l9.5-8.5L4 3.5Z" fill="#a7e5d3"/><path d="M13.5 12L17 9l3.5 2c.8.5.8 1.6 0 2L17 15l-3.5-3Z" fill="#f4c5a8"/><path d="M4 3.5l9.5 8.5L17 9 4 3.5Z" fill="#a8c8e8"/><path d="M4 20.5l9.5-8.5L17 15 4 20.5Z" fill="#c8b8e0"/></svg>
+            <span style="font-size:15px;color:#fff;">Google Play</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<dc-import name="site-footer" hint-size="100%,360px"></dc-import>
+<sc-if value="{{ showTop }}" hint-placeholder-val="{{ false }}">
+  <button onClick="{{ toTop }}" aria-label="맨 위로" style="position:fixed;bottom:24px;right:24px;z-index:90;width:48px;height:48px;border-radius:50%;background:#292524;border:none;cursor:pointer;box-shadow:0 8px 24px -8px rgba(41,37,36,0.5);display:flex;align-items:center;justify-content:center;transition:background .2s;" style-hover="background:#0c0a09;">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V6M6 12l6-6 6 6"/></svg>
+  </button>
+</sc-if>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { submitted: false, inquiry: '도입 문의', showTop: false };
+  componentDidMount() {
+    this._onScroll = () => {
+      const show = window.scrollY > 600;
+      if (show !== this.state.showTop) this.setState({ showTop: show });
+    };
+    window.addEventListener('scroll', this._onScroll, { passive: true });
+  }
+  componentWillUnmount() { window.removeEventListener('scroll', this._onScroll); }
+  chip(active) {
+    return 'font-size:14px;padding:8px 14px;border-radius:9999px;cursor:pointer;transition:all .15s;' +
+      (active
+        ? 'background:#292524;color:#fff;border:1px solid #292524;'
+        : 'background:#fafafa;color:#4e4e4e;border:1px solid #e7e5e4;');
+  }
+  renderVals() {
+    return {
+      submitted: this.state.submitted,
+      editing: !this.state.submitted,
+      chipDemo: this.chip(this.state.inquiry === '도입 문의'),
+      chipTrial: this.chip(this.state.inquiry === '무료 체험'),
+      chipApp: this.chip(this.state.inquiry === '앱 다운로드'),
+      pickInquiry: (e) => this.setState({ inquiry: e.currentTarget.getAttribute('data-v') }),
+      submit: (e) => { e.preventDefault(); this.setState({ submitted: true }); if (window.scrollY > 300) window.scrollTo({ top: 200, behavior: 'smooth' }); },
+      reset: () => this.setState({ submitted: false }),
+      showTop: this.state.showTop,
+      toTop: () => window.scrollTo({ top: 0, behavior: 'smooth' }),
+    };
+  }
+}
+</script>
+</body>
+</html>
