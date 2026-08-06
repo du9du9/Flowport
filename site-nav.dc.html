@@ -8,16 +8,13 @@
 <body>
 <x-dc>
 <helmet>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 </helmet>
 <div style="height:64px;"></div>
-<header style="position:fixed;top:0;left:0;right:0;z-index:80;background:rgba(245,245,245,0.82);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid #e7e5e4;font-family:Inter,system-ui,sans-serif;">
+<header style="position: fixed; top: 0; left: 0; right: 0; z-index: 80; backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); border-bottom: 1px solid #e7e5e4; font-family: 'Pretendard',system-ui,-apple-system,sans-serif; background-color: #FFFFFFD1">
   <div style="max-width:1200px;margin:0 auto;height:64px;padding:0 24px;display:flex;align-items:center;justify-content:space-between;gap:24px;">
     <a href="home.dc.html" style="display:flex;align-items:center;gap:10px;text-decoration:none;flex-shrink:0;">
-      <span style="width:22px;height:22px;border-radius:50%;background:radial-gradient(circle at 32% 28%, #a7e5d3, #a8c8e8 52%, #c8b8e0 100%);box-shadow:0 1px 4px rgba(41,37,36,0.12);"></span>
-      <span style="font-size:17px;font-weight:600;letter-spacing:-0.02em;color:#292524;">FLOWPORT</span>
+      <span style="width:24px;height:24px;border-radius:7px;background:#4E31CC;display:flex;align-items:center;justify-content:center;box-shadow:0 2px 6px rgba(78,49,204,0.35);flex-shrink:0;font-size:14px;font-weight:800;color:#fff;line-height:1;">F</span>
+      <span style="font-size:17px;font-weight:700;letter-spacing:-0.02em;color:#000000;">FLOWPORT</span>
     </a>
     <sc-if value="{{ desktop }}" hint-placeholder-val="{{ true }}">
       <nav style="display:flex;align-items:center;gap:34px;">
@@ -28,7 +25,7 @@
       </nav>
       <div style="display:flex;align-items:center;gap:14px;flex-shrink:0;">
         <a href="contact.dc.html" style="text-decoration:none;font-size:15px;color:#292524;" style-hover="opacity:0.65;">로그인</a>
-        <a href="contact.dc.html" style="text-decoration:none;font-size:15px;color:#ffffff;background:#292524;padding:9px 18px;border-radius:9999px;" style-hover="background:#0c0a09;">무료 체험</a>
+        <a href="contact.dc.html" style="text-decoration: none; font-size: 15px; color: #ffffff; padding: 9px 18px; border-radius: 9999px; background-color: #4E31CC" style-hover="background:#4E31CC;">무료 체험</a>
       </div>
     </sc-if>
     <sc-if value="{{ mobile }}" hint-placeholder-val="{{ false }}">
@@ -40,12 +37,12 @@
     </sc-if>
   </div>
   <sc-if value="{{ menuOpen }}" hint-placeholder-val="{{ false }}">
-    <div style="border-top:1px solid #e7e5e4;padding:12px 24px 24px;display:flex;flex-direction:column;gap:4px;font-family:Inter,system-ui,sans-serif;">
+    <div style="border-top:1px solid #e7e5e4;padding:12px 24px 24px;display:flex;flex-direction:column;gap:4px;font-family:'Pretendard',system-ui,-apple-system,sans-serif;">
       <a href="features.dc.html" style="text-decoration:none;font-size:18px;color:#292524;padding:12px 0;border-bottom:1px solid #f0efed;">기능</a>
       <a href="pricing.dc.html" style="text-decoration:none;font-size:18px;color:#292524;padding:12px 0;border-bottom:1px solid #f0efed;">요금</a>
       <a href="features.dc.html#integrations" style="text-decoration:none;font-size:18px;color:#292524;padding:12px 0;border-bottom:1px solid #f0efed;">연동</a>
       <a href="contact.dc.html" style="text-decoration:none;font-size:18px;color:#292524;padding:12px 0;border-bottom:1px solid #f0efed;">문의</a>
-      <a href="contact.dc.html" style="text-decoration:none;text-align:center;font-size:15px;color:#ffffff;background:#292524;padding:12px 18px;border-radius:9999px;margin-top:14px;">무료 체험 시작</a>
+      <a href="contact.dc.html" style="text-decoration:none;text-align:center;font-size:15px;color:#ffffff;background:#4E31CC;padding:12px 18px;border-radius:9999px;margin-top:14px;">무료 체험 시작</a>
     </div>
   </sc-if>
 </header>

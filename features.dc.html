@@ -8,12 +8,14 @@
 <body>
 <x-dc>
 <helmet>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
+  @font-face{font-family:'Pretendard';src:url('./fonts/Pretendard-Light.otf') format('opentype');font-weight:300;font-display:swap;}
+  @font-face{font-family:'Pretendard';src:url('./fonts/Pretendard-Regular.otf') format('opentype');font-weight:400;font-display:swap;}
+  @font-face{font-family:'Pretendard';src:url('./fonts/Pretendard-Medium.otf') format('opentype');font-weight:500;font-display:swap;}
+  @font-face{font-family:'Pretendard';src:url('./fonts/Pretendard-SemiBold.otf') format('opentype');font-weight:600;font-display:swap;}
+  @font-face{font-family:'Pretendard';src:url('./fonts/Pretendard-Bold.otf') format('opentype');font-weight:700;font-display:swap;}
   *{box-sizing:border-box;}
-  body{margin:0;background:#f5f5f5;color:#292524;font-family:Inter,system-ui,sans-serif;-webkit-font-smoothing:antialiased;}
+  body{margin:0;background:#f5f5f5;color:#292524;font-family:'Pretendard',system-ui,-apple-system,sans-serif;-webkit-font-smoothing:antialiased;}
   a{color:#292524;}
   @keyframes fp-driftA{0%,100%{transform:translate(0,0) scale(1);}50%{transform:translate(36px,-24px) scale(1.08);}}
   @keyframes fp-driftB{0%,100%{transform:translate(0,0) scale(1);}50%{transform:translate(-40px,26px) scale(1.1);}}
@@ -39,7 +41,7 @@
 
     <div style="display:flex;flex-wrap:wrap;gap:clamp(40px,5vw,64px);align-items:center;">
       <div style="flex:1 1 380px;min-width:280px;">
-        <div style="width:48px;height:48px;border-radius:50%;background:#f0efed;display:flex;align-items:center;justify-content:center;margin-bottom:20px;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#292524" stroke-width="1.5" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
+        <div style="width:48px;height:48px;border-radius:50%;background:#f0efed;display:flex;align-items:center;justify-content:center;margin-bottom:20px;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#292524" stroke-width="1.5" stroke-linecap="round"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg></div>
         <h2 style="font-size:clamp(28px,3.6vw,40px);font-weight:300;letter-spacing:-0.02em;line-height:1.15;margin:0 0 16px;color:#292524;">출퇴근</h2>
         <p style="font-size:17px;line-height:1.6;color:#4e4e4e;margin:0 0 20px;">사무실 입구 NFC 태그에 휴대폰을 대면 위치·시각이 검증되어 출근이 기록됩니다. 네트워크가 끊겨도 오프라인 캐시 후 자동 동기화됩니다.</p>
         <div style="display:flex;flex-direction:column;gap:10px;font-size:15px;color:#4e4e4e;">
@@ -77,7 +79,7 @@
         </div>
       </div>
       <div style="flex:1 1 380px;min-width:280px;">
-        <div style="width:48px;height:48px;border-radius:50%;background:#f0efed;display:flex;align-items:center;justify-content:center;margin-bottom:20px;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#292524" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></div>
+        <div style="width:48px;height:48px;border-radius:50%;background:#f0efed;display:flex;align-items:center;justify-content:center;margin-bottom:20px;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#292524" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"></path></svg></div>
         <h2 style="font-size:clamp(28px,3.6vw,40px);font-weight:300;letter-spacing:-0.02em;line-height:1.15;margin:0 0 16px;color:#292524;">연차</h2>
         <p style="font-size:17px;line-height:1.6;color:#4e4e4e;margin:0 0 20px;">남은 연차를 확인하고 몇 번의 탭으로 신청합니다. 팀장은 같은 화면에서 바로 승인하고, 팀 근태 현황을 한눈에 파악합니다.</p>
         <div style="display:flex;flex-direction:column;gap:10px;font-size:15px;color:#4e4e4e;">
@@ -89,7 +91,7 @@
 
     <div style="display:flex;flex-wrap:wrap;gap:clamp(40px,5vw,64px);align-items:center;">
       <div style="flex:1 1 380px;min-width:280px;">
-        <div style="width:48px;height:48px;border-radius:50%;background:#f0efed;display:flex;align-items:center;justify-content:center;margin-bottom:20px;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#292524" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 9h18M8 3v4M16 3v4"/></svg></div>
+        <div style="width:48px;height:48px;border-radius:50%;background:#f0efed;display:flex;align-items:center;justify-content:center;margin-bottom:20px;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#292524" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"></rect><path d="M3 9h18M8 3v4M16 3v4"></path></svg></div>
         <h2 style="font-size:clamp(28px,3.6vw,40px);font-weight:300;letter-spacing:-0.02em;line-height:1.15;margin:0 0 16px;color:#292524;">일정 · 공지</h2>
         <p style="font-size:17px;line-height:1.6;color:#4e4e4e;margin:0 0 20px;">팀 캘린더에 연차·근무 일정과 공용 일정이 모입니다. 전사·팀 공지는 발행 즉시 전달되고, 읽음 여부까지 확인됩니다.</p>
         <div style="display:flex;flex-direction:column;gap:10px;font-size:15px;color:#4e4e4e;">
@@ -133,7 +135,7 @@
         </div>
       </div>
       <div style="flex:1 1 380px;min-width:280px;">
-        <div style="width:48px;height:48px;border-radius:50%;background:#f0efed;display:flex;align-items:center;justify-content:center;margin-bottom:20px;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#292524" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H9l-5 4V6a1 1 0 0 1 1-1Z"/></svg></div>
+        <div style="width:48px;height:48px;border-radius:50%;background:#f0efed;display:flex;align-items:center;justify-content:center;margin-bottom:20px;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#292524" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H9l-5 4V6a1 1 0 0 1 1-1Z"></path></svg></div>
         <h2 style="font-size:clamp(28px,3.6vw,40px);font-weight:300;letter-spacing:-0.02em;line-height:1.15;margin:0 0 16px;color:#292524;">채팅 · 급여명세서</h2>
         <p style="font-size:17px;line-height:1.6;color:#4e4e4e;margin:0 0 20px;">1:1과 그룹 대화, 파일 공유까지 업무 맥락 안에서 이어집니다. 근태 데이터가 급여에 반영되고, 월별 명세서를 본인 인증 후 안전하게 열람합니다. <span style="color:#777169;">(2차)</span></p>
         <div style="display:flex;flex-direction:column;gap:10px;font-size:15px;color:#4e4e4e;">
@@ -147,27 +149,27 @@
   </div>
 </section>
 
-<section id="integrations" style="background:#0c0a09;color:#fff;">
-  <div style="max-width:1200px;margin:0 auto;padding:clamp(64px,9vw,96px) 24px;">
+<section id="integrations" style="background:#4E31CC;color:#fff;">
+  <div style="max-width: 1200px; margin: 0 auto; padding: clamp(64px,9vw,96px) 24px; padding-top: clamp(64px,9vw,200px); padding-bottom: clamp(64px,9vw,200px)">
     <div style="max-width:660px;margin:0 auto 48px;text-align:center;">
-      <div style="font-size:12px;letter-spacing:0.1em;text-transform:uppercase;color:#777169;margin-bottom:20px;">데이터 · 연동</div>
+      <div style="font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: #FFFFFF; margin-bottom: 20px">데이터 · 연동</div>
       <h2 style="font-size:clamp(28px,4.6vw,40px);font-weight:300;line-height:1.1;letter-spacing:-0.02em;margin:0;color:#fff;">현장 인프라를 앱 안으로.</h2>
     </div>
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px;">
-      <div style="background:#1c1917;border:1px solid #292524;border-radius:16px;padding:28px;">
+      <div style="border: 1px solid #292524; border-radius: 16px; padding: 28px; background-color: #4E31CC; border-color: #866CF4">
         <div style="font-size:12px;letter-spacing:0.1em;text-transform:uppercase;color:#a7e5d3;margin-bottom:16px;">NFC</div>
         <div style="font-size:20px;font-weight:500;color:#fff;margin-bottom:12px;">출퇴근 태그</div>
-        <div style="display:flex;flex-direction:column;gap:8px;font-size:14px;color:#a8a29e;"><span>· 태그 UID ↔ 사업장/게이트 매핑</span><span>· 위치·시각 검증, 중복 방지</span><span>· 오프라인 캐시 후 동기화</span></div>
+        <div style="display:flex;flex-direction:column;gap:8px;font-size:14px;color:#a8a29e;"><span style="color: #A893FF">· 태그 UID ↔ 사업장/게이트 매핑</span><span style="color: #A893FF">· 위치·시각 검증, 중복 방지</span><span style="color: #A893FF">· 오프라인 캐시 후 동기화</span></div>
       </div>
-      <div style="background:#1c1917;border:1px solid #292524;border-radius:16px;padding:28px;">
+      <div style="border: 1px solid #292524; border-radius: 16px; padding: 28px; background-color: #4E31CC; border-color: #866CF4">
         <div style="font-size:12px;letter-spacing:0.1em;text-transform:uppercase;color:#a8c8e8;margin-bottom:16px;">SECOM</div>
         <div style="font-size:20px;font-weight:500;color:#fff;margin-bottom:12px;">세콤 연동</div>
-        <div style="display:flex;flex-direction:column;gap:8px;font-size:14px;color:#a8a29e;"><span>· 사업장별 경비 상태 조회</span><span>· 이벤트 로그 수신</span><span>· 연동 계정·API 키 관리</span></div>
+        <div style="display:flex;flex-direction:column;gap:8px;font-size:14px;color:#a8a29e;"><span style="color: #A893FF">· 사업장별 경비 상태 조회</span><span style="color: #A893FF">· 이벤트 로그 수신</span><span style="color: #A893FF">· 연동 계정·API 키 관리</span></div>
       </div>
-      <div style="background:#1c1917;border:1px solid #292524;border-radius:16px;padding:28px;">
+      <div style="border: 1px solid #292524; border-radius: 16px; padding: 28px; background-color: #4E31CC; border-color: #866CF4">
         <div style="font-size:12px;letter-spacing:0.1em;text-transform:uppercase;color:#c8b8e0;margin-bottom:16px;">PAYROLL</div>
         <div style="font-size:20px;font-weight:500;color:#fff;margin-bottom:12px;">급여 시스템</div>
-        <div style="display:flex;flex-direction:column;gap:8px;font-size:14px;color:#a8a29e;"><span>· 근무시간·연차 → 급여 반영</span><span>· 월별 명세서 PDF 발급</span><span>· 본인 인증 후 열람</span></div>
+        <div style="display:flex;flex-direction:column;gap:8px;font-size:14px;color:#a8a29e;"><span style="color: #A893FF">· 근무시간·연차 → 급여 반영</span><span style="color: #A893FF">· 월별 명세서 PDF 발급</span><span style="color: #A893FF">· 본인 인증 후 열람</span></div>
       </div>
     </div>
   </div>
@@ -176,15 +178,15 @@
 <section style="max-width:900px;margin:0 auto;padding:clamp(64px,9vw,96px) 24px;text-align:center;">
   <h2 style="font-size:clamp(28px,4.6vw,40px);font-weight:300;letter-spacing:-0.02em;line-height:1.1;margin:0 0 24px;color:#292524;">기능을 직접 확인해 보세요.</h2>
   <div style="display:flex;flex-wrap:wrap;gap:12px;justify-content:center;">
-    <a href="contact.dc.html" style="text-decoration:none;font-size:15px;color:#ffffff;background:#292524;padding:14px 28px;border-radius:9999px;" style-hover="background:#0c0a09;">무료 체험 시작</a>
+    <a href="contact.dc.html" style="text-decoration: none; font-size: 15px; color: #ffffff; padding: 14px 28px; border-radius: 9999px; background-color: #4E31CC" style-hover="background:#4E31CC;">무료 체험 시작</a>
     <a href="pricing.dc.html" style="text-decoration:none;font-size:15px;color:#292524;background:transparent;border:1px solid #d6d3d1;padding:13px 27px;border-radius:9999px;" style-hover="border-color:#292524;">요금제 보기</a>
   </div>
 </section>
 
 <dc-import name="site-footer" hint-size="100%,360px"></dc-import>
 <sc-if value="{{ showTop }}" hint-placeholder-val="{{ false }}">
-  <button onClick="{{ toTop }}" aria-label="맨 위로" style="position:fixed;bottom:24px;right:24px;z-index:90;width:48px;height:48px;border-radius:50%;background:#292524;border:none;cursor:pointer;box-shadow:0 8px 24px -8px rgba(41,37,36,0.5);display:flex;align-items:center;justify-content:center;transition:background .2s;" style-hover="background:#0c0a09;">
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V6M6 12l6-6 6 6"/></svg>
+  <button onClick="{{ toTop }}" aria-label="맨 위로" style="position:fixed;bottom:24px;right:24px;z-index:90;width:48px;height:48px;border-radius:50%;background:#4E31CC;border:none;cursor:pointer;box-shadow:0 8px 24px -8px rgba(41,37,36,0.5);display:flex;align-items:center;justify-content:center;transition:background .2s;" style-hover="background:#4E31CC;">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V6M6 12l6-6 6 6"></path></svg>
   </button>
 </sc-if>
 </div>
